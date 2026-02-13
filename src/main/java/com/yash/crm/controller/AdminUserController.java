@@ -34,4 +34,5 @@ public class AdminUserController {
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
+
 }
