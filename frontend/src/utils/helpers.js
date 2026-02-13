@@ -1,3 +1,5 @@
+import { STATUS_COLORS, ROLE_COLORS } from './constants';
+
 export const formatDate = (dateString) => {
   if (!dateString) return '';
   const date = new Date(dateString);
@@ -21,22 +23,9 @@ export const formatDateTime = (dateString) => {
 };
 
 export const getStatusColor = (status) => {
-  const colors = {
-    NEW: 'bg-blue-100 text-blue-800',
-    CONTACTED: 'bg-yellow-100 text-yellow-800',
-    INTERESTED: 'bg-green-100 text-green-800',
-    CONVERTED: 'bg-purple-100 text-purple-800',
-    LOST: 'bg-red-100 text-red-800',
-  };
-  return colors[status] || 'bg-gray-100 text-gray-800';
+  return STATUS_COLORS[status] || 'bg-gray-100 text-gray-800';
 };
 
 export const getRoleColor = (role) => {
-  const colors = {
-    ADMIN: 'bg-red-100 text-red-800',
-    MANAGER: 'bg-blue-100 text-blue-800',
-    TEAM_LEAD: 'bg-green-100 text-green-800',
-    EMPLOYEE: 'bg-gray-100 text-gray-800',
-  };
-  return colors[role] || 'bg-gray-100 text-gray-800';
+  return ROLE_COLORS[role] || 'bg-gray-100 text-gray-800';
 };
