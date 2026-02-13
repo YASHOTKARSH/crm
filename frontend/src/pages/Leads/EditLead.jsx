@@ -11,12 +11,11 @@ export default function EditLead() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [fetchingLead, setFetchingLead] = useState(true);
-  const [users, setUsers] = useState([]);
   const { register, handleSubmit, formState: { errors }, setValue } = useForm();
 
   useEffect(() => {
     fetchLead();
-    fetchUsers();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   const fetchLead = async () => {
@@ -40,15 +39,6 @@ export default function EditLead() {
       navigate('/leads');
     } finally {
       setFetchingLead(false);
-    }
-  };
-
-  const fetchUsers = async () => {
-    try {
-      const { data } = await api.get('/api/admin/users');
-      setUsers(data);
-    } catch (error) {
-      console.error('Failed to fetch users:', error);
     }
   };
 

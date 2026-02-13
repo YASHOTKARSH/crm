@@ -167,7 +167,7 @@ export default function LeadsList() {
           <div className="bg-white rounded-lg p-6 max-w-md w-full">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Delete Lead</h3>
             <p className="text-gray-600 mb-6">
-              Are you sure you want to delete lead "{deleteModal.name}"? This action cannot be undone.
+              Are you sure you want to delete lead &quot;{deleteModal.name}&quot;? This action cannot be undone.
             </p>
             <div className="flex justify-end gap-3">
               <button
@@ -193,7 +193,7 @@ export default function LeadsList() {
           <div className="bg-white rounded-lg p-6 max-w-md w-full">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Convert Lead</h3>
             <p className="text-gray-600 mb-4">
-              Convert lead "{convertModal.name}" to client
+              Convert lead &quot;{convertModal.name}&quot; to client
             </p>
             <div className="mb-6">
               <label className="block text-sm font-medium text-gray-700 mb-2">
